@@ -238,12 +238,10 @@ img {
 
 .features__summary {
   margin: 0;
-  padding: var(--space-md);
-  background: var(--color-surface);
-  border-radius: var(--radius);
-  border: 1px solid var(--color-border);
-  font-size: 0.9375rem;
-  color: var(--color-text-muted);
+  padding: 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-text);
 }
 
 /* Screenshots */
