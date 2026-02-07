@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏃‍♂️‍➡️ Run Goal — цель на год, план на неделю</title>
+  <meta name="description" content="Telegram-бот для бегунов: ставьте годовую цель, ведите журнал тренировок, получайте план на неделю и достигайте цели к концу года.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">🏃‍♂️‍➡️ Run Goal</a>
+      <p class="header__tagline">Цель на год. План на неделю.</p>
+      <a href="https://t.me/RunGoalBot" class="btn btn--primary header__cta" target="_blank" rel="noopener">Перейти в бота</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section how" id="how">
+      <div class="container container--wide">
+        <h2 class="section__title">Telegram Mini App для бегунов</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3 class="step__title">Запустите бота <a href="https://t.me/RunGoalBot" target="_blank" rel="noopener">@RunGoalBot</a></h3>
+            <p class="step__text">Если у вас есть Telegram, дополнительная регистрация не нужна.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3 class="step__title">Поставь цель</h3>
+            <p class="step__text">Укажите годовую цель в километрах. Например для регулярного участия в массовом забеге на 10 км я ставлю годовую цель 600 км.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3 class="step__title">Вносите тренировки и следите за прогрессом</h3>
+            <p class="step__text">Отмечайте выполненное в боте. При срывах план пересчитается так, чтобы к концу года всё равно прийти к цели.</p>
+          </li>
+        </ol>
+        <p class="how__cta-wrap">
+          <a href="https://t.me/RunGoalBot" class="btn btn--primary btn--large" target="_blank" rel="noopener">Начать в Telegram</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section screenshots" id="screenshots">
+      <div class="container">
+        <h2 class="section__title">Как выглядит бот</h2>
+        <div class="screenshots__grid">
+          <figure class="screenshot">
+            <img src="images/screen-main.webp" alt="Главное окно бота Run Goal" width="280" height="480" loading="lazy">
+            <figcaption>Главный экран</figcaption>
+          </figure>
+          <figure class="screenshot">
+            <img src="images/screen-stats.webp" alt="Статистика за год" width="280" height="480" loading="lazy">
+            <figcaption>Статистика за год</figcaption>
+          </figure>
+          <figure class="screenshot">
+            <img src="images/screen-input.webp" alt="Ввод тренировки" width="280" height="480" loading="lazy">
+            <figcaption>Ввод тренировки</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <h2 class="section__title">Что вы получаете</h2>
+        <ul class="features__list">
+          <li><strong>Цель на год</strong> — задаёте один раз, можно потом усложнить или упростить.</li>
+          <li><strong>План на неделю</strong> — автоматически от годовой цели, без ручного расчёта.</li>
+          <li><strong>Журнал тренировок</strong> — все занятия в одном месте в боте.</li>
+          <li><strong>Статистика по месяцам</strong> — наглядный прогресс.</li>
+          <li><strong>План и факт</strong> — видно, как идёте к цели.</li>
+          <li><strong>Пересчёт плана</strong> — при пропуске тренировок план обновляется, чтобы к концу года цель оставалась достижимой.</li>
+        </ul>
+        <p class="features__summary">В итоге сервис мотивирует к регулярным тренировкам и помогает выработать привычку бегать.</p>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <h2 class="section__title">Тарифы</h2>
+        <p class="pricing__trial">Есть бесплатный пробный период. После него для продолжения нужна подписка.</p>
+        <div class="pricing__grid">
+          <div class="price-card">
+            <h3 class="price-card__period">1 месяц</h3>
+            <p class="price-card__price">200 ₽</p>
+          </div>
+          <div class="price-card">
+            <h3 class="price-card__period">3 месяца</h3>
+            <p class="price-card__price">590 ₽</p>
+          </div>
+          <div class="price-card">
+            <h3 class="price-card__period">6 месяцев</h3>
+            <p class="price-card__price">1 100 ₽</p>
+          </div>
+          <div class="price-card price-card--best">
+            <h3 class="price-card__period">12 месяцев</h3>
+            <p class="price-card__price">2 000 ₽</p>
+          </div>
+        </div>
+        <p class="pricing__cta-wrap">
+          <a href="https://t.me/RunGoalBot" class="btn btn--primary" target="_blank" rel="noopener">Выбрать тариф в боте</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section payment" id="payment">
+      <div class="container">
+        <h2 class="section__title">Оплата и условия</h2>
+        <ul class="payment__list">
+          <li><strong>Оплата</strong> — в боте, картой или через СБП. Автоматических списаний нет.</li>
+          <li><strong>Доступ</strong> — сразу после оплаты. Услуга оказывается в Telegram-боте.</li>
+          <li><strong>Срок</strong> — на выбранный период (месяц, 3, 6 или 12 месяцев).</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__name">ИП Скляров Олег Андреевич</p>
+      <p class="footer__detail">ОГРНИП: 322527500062225</p>
+      <p class="footer__detail">ИНН: 526222945917</p>
+      <nav class="legal-links footer__links">
+        <a href="oferta.html">Оферта</a>
+        <a href="policy.html">Политика конфиденциальности</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

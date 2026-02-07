@@ -1,0 +1,143 @@
+/* Стили для страниц оферты и политики (oferta.html, policy.html) */
+
+:root {
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Legal (Oferta, Policy) — standalone pages */
+.page-legal main {
+  padding: var(--space-md) 0;
+}
+
+body.page-legal {
+  font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Monaco, "Courier New", monospace;
+  color: initial;
+}
+
+.page-legal .legal-page__title,
+.page-legal .legal__content,
+.page-legal .legal__content h3,
+.page-legal .legal__content .legal-sections > li::before,
+.page-legal .legal__content .legal-sections > li > h3 {
+  color: inherit;
+}
+
+.legal-page {
+  width: 100%;
+  max-width: none;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.legal-page__title {
+  margin: 0 0 var(--space-lg);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.legal__content {
+  font-size: 0.9375rem;
+}
+
+.legal__content h3 {
+  margin: var(--space-lg) 0 var(--space-sm);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.legal__content h3:first-of-type {
+  margin-top: var(--space-md);
+}
+
+.legal__content p {
+  margin: 0 0 var(--space-sm);
+}
+
+.legal__content ol {
+  margin: 0 0 var(--space-sm);
+  padding-left: 0;
+}
+
+.legal__content ol li {
+  margin-bottom: 0.25rem;
+}
+
+.legal__content ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* Внешний список разделов (нумерация h3 через ol) */
+.legal__content .legal-sections {
+  counter-reset: section;
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 var(--space-sm);
+}
+
+.legal__content .legal-sections > li {
+  counter-increment: section;
+  margin-bottom: var(--space-lg);
+}
+
+.legal__content .legal-sections > li::before {
+  content: counter(section) ". ";
+  font-weight: 600;
+}
+
+.legal__content .legal-sections > li:last-child {
+  margin-bottom: 0;
+}
+
+.legal__content .legal-sections > li > h3 {
+  display: inline;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.legal__content .legal-sections > li > h3::after {
+  content: '\A';
+  white-space: pre;
+}
+
+.legal__content .legal-sections > li > ol {
+  counter-reset: subsection;
+  list-style: none;
+  padding-left: 0;
+  margin-top: var(--space-xs);
+  margin-bottom: 0;
+}
+
+.legal__content .legal-sections > li > ol > li {
+  counter-increment: subsection;
+  margin-bottom: 0.25rem;
+}
+
+.legal__content .legal-sections > li > ol > li::before {
+  content: counter(section) "." counter(subsection) ". ";
+}
+
+.legal__content .legal-sections > li > ol > li:last-child {
+  margin-bottom: 0;
+}
+
+.legal__content .legal-sections > li > p {
+  margin-top: var(--space-xs);
+  margin-bottom: 0;
+}
