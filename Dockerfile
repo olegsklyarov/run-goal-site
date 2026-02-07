@@ -8,6 +8,7 @@ COPY policy.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/
 COPY styles-contracts.css /usr/share/nginx/html/
 COPY images/ /usr/share/nginx/html/images/
+COPY fonts/ /usr/share/nginx/html/fonts/
 
 LABEL traefik.enable=true
 LABEL traefik.http.routers.run_goal.rule=Host(`run-goal.olegsklyarov.ru`)
