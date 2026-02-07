@@ -321,6 +321,17 @@ img {
   color: var(--color-accent);
 }
 
+.price-card__benefit {
+  margin: var(--space-xs) 0 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.price-card--best .price-card__benefit {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
 .pricing__cta-wrap {
   text-align: center;
   margin: 0;
