@@ -11,5 +11,5 @@ run:
 	docker run -it -d --restart=unless-stopped --network=infra_web_net --name run-goal-site olegsklyarov/run-goal-site
 
 stop:
-	docker stop run-goal-site
-	docker rm run-goal-site
+	docker stop run-goal-site || true
+	docker rm run-goal-site || true
