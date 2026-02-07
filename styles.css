@@ -74,10 +74,6 @@ img {
   max-width: var(--max-width-narrow);
 }
 
-.container--wide {
-  max-width: 871px; /* ~21% wider than 720px */
-}
-
 /* Buttons */
 .btn {
   display: inline-block;
