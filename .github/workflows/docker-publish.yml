@@ -3,8 +3,6 @@ name: Build and push Docker image to GHCR
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [master]
 
 permissions:
   contents: read
@@ -43,3 +41,22 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    needs: docker-publish
+
+    steps:
+      - name: Trigger deployment
+        run: |
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+            'https://deployer.olegsklyarov.ru/deploy/run-goal-site' \
+            -H 'accept: application/json' \
+            -H 'Authorization: Bearer ${{ secrets.DEPLOY_TOKEN }}' \
+            -d '')
+          if [ "$HTTP_CODE" -ne 200 ]; then
+            echo "Deployment webhook returned HTTP $HTTP_CODE, expected 200"
+            exit 1
+          fi
+          echo "Deployment triggered successfully (HTTP 200)"
