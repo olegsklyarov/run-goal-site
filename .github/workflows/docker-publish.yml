@@ -3,6 +3,8 @@ name: Build and push Docker image to GHCR
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [master]
 
 permissions:
   contents: read
