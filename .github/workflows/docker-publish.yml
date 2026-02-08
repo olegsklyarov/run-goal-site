@@ -45,8 +45,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
-    needs: docker-publish
-
+    needs: build-and-push
     steps:
       - name: Trigger deployment
         run: |
