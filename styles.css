@@ -161,6 +161,7 @@ img {
 }
 
 .header__tagline {
+  display: none;
   margin: 0 0 0 30px;
   padding-top: 0.05rem;
   font-size: 0.9375rem;
@@ -469,6 +470,10 @@ img {
 
 /* Tablet */
 @media (min-width: 600px) {
+  .header__tagline {
+    display: block;
+  }
+
   .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
